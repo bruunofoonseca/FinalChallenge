@@ -59,27 +59,39 @@ class ViewController: UIViewController {
     
     
     @IBAction func btnTraduzir(sender: AnyObject) {
-        self.frase = txtFrase.text!
-        palavra = frase.componentsSeparatedByCharactersInSet(separadorDasPalavras)
-        
-        verifica(sujeitoLista)
-        verifica(verboLista)
-        verifica(objetoLista)
-        verifica(lugarLista)
-        verifica(tempoLista)
-        
-        self.juntaPalavras.removeAll()
-        self.lblConvertido.text?.removeAll()
-        
-        print(self.juntaPalavras)
-
-        for i in 0...fraseOrganizada.count - 1{
+        if(self.txtFrase.text != "")
+        {
+            self.frase = txtFrase.text!
+            palavra = frase.componentsSeparatedByCharactersInSet(separadorDasPalavras)
             
-            juntaPalavras += fraseOrganizada[i]+" "
+            verifica(sujeitoLista)
+            verifica(verboLista)
+            verifica(objetoLista)
+            verifica(lugarLista)
+            verifica(tempoLista)
             
+            self.juntaPalavras.removeAll()
+            self.lblConvertido.text?.removeAll()
+            
+            print(self.juntaPalavras)
+            
+            for i in 0...fraseOrganizada.count - 1{
+                
+                juntaPalavras += fraseOrganizada[i]+" "
+                
+            }
+            self.lblConvertido.text = self.juntaPalavras
+            self.fraseOrganizada.removeAll()
         }
-        self.lblConvertido.text = self.juntaPalavras
-        self.fraseOrganizada.removeAll()
+        else
+        {
+            let alertView: UIAlertView = UIAlertView()
+            alertView.title = "Erro"
+            alertView.message = "Caixa de texto vazia!"
+            alertView.delegate = self
+            alertView.addButtonWithTitle("OK")
+            alertView.show()
+        }
     }
     
     func apareceNaTela(){
