@@ -13,7 +13,8 @@ class ViewController: UIViewController {
     //variavel que define qundo a palavra será separada.
     let separadorDasPalavras = NSCharacterSet(charactersInString: " ")
     
-    @IBOutlet var txtFrase: UITextField!
+    
+    @IBOutlet weak var txtFrase: UITextField!
     @IBOutlet weak var lblConvertido: UILabel!
     
     //lista de palavras para teste
@@ -24,7 +25,8 @@ class ViewController: UIViewController {
     var lugarLista = ["mercado", "praia"]
     
     //frase digitada pelo usuário.
-    var frase: String = "";
+    var frase: String = ""
+    var juntaPalavras: String = ""
     
     //variaveis.
     var count = 0
@@ -42,7 +44,7 @@ class ViewController: UIViewController {
         verifica(objetoLista)
         verifica(lugarLista)
         verifica(tempoLista)
-        apareceNaTela()
+        //apareceNaTela()
     }
     
     func verifica(lista : [String]){
@@ -54,9 +56,30 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    
     @IBAction func btnTraduzir(sender: AnyObject) {
         self.frase = txtFrase.text!
+        palavra = frase.componentsSeparatedByCharactersInSet(separadorDasPalavras)
         
+        verifica(sujeitoLista)
+        verifica(verboLista)
+        verifica(objetoLista)
+        verifica(lugarLista)
+        verifica(tempoLista)
+        
+        self.juntaPalavras.removeAll()
+        self.lblConvertido.text?.removeAll()
+        
+        print(self.juntaPalavras)
+
+        for i in 0...fraseOrganizada.count - 1{
+            
+            juntaPalavras += fraseOrganizada[i]+" "
+            
+        }
+        self.lblConvertido.text = self.juntaPalavras
+        self.fraseOrganizada.removeAll()
     }
     
     func apareceNaTela(){
@@ -70,6 +93,10 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }
 

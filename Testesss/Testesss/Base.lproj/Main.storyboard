@@ -58,7 +58,7 @@
                     </view>
                     <connections>
                         <outlet property="lblConvertido" destination="MAC-QT-Lab" id="abg-q4-13b"/>
-                        <outletCollection property="txtFrase" destination="2O6-9A-KeH" collectionClass="NSMutableArray" id="tYL-Vs-ecN"/>
+                        <outlet property="txtFrase" destination="2O6-9A-KeH" id="8WU-Io-3OS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
