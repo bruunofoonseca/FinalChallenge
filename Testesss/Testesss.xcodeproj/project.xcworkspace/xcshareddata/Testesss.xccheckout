@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E19E1776-D347-4E04-943E-1A33502D165B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Testesss</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B6B65EF1FF2B4399BC63CA914D28BD6E12DFFFD3</key>
+		<string>https://github.com/bruunofoonseca/FinalChallenge.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Testesss/Testesss.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B6B65EF1FF2B4399BC63CA914D28BD6E12DFFFD3</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/bruunofoonseca/FinalChallenge.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B6B65EF1FF2B4399BC63CA914D28BD6E12DFFFD3</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B6B65EF1FF2B4399BC63CA914D28BD6E12DFFFD3</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FinalChallenge</string>
+		</dict>
+	</array>
+</dict>
+</plist>

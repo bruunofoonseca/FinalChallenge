@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     //variavel que define qundo a palavra será separada.
     let separadorDasPalavras = NSCharacterSet(charactersInString: " ")
     
+    @IBOutlet var txtFrase: UITextField!
+    @IBOutlet weak var lblConvertido: UILabel!
+    
     //lista de palavras para teste
     var sujeitoLista = ["eu", "você", "Mayara","Bruno", "André", "Gabi"]
     var verboLista = ["ir", "comprar", "gostar"]
@@ -21,7 +24,7 @@ class ViewController: UIViewController {
     var lugarLista = ["mercado", "praia"]
     
     //frase digitada pelo usuário.
-    var frase: String = "eu mercado amanhã Mayara ir";
+    var frase: String = "";
     
     //variaveis.
     var count = 0
@@ -44,18 +47,23 @@ class ViewController: UIViewController {
     
     func verifica(lista : [String]){
         for i in 0...palavra.count - 1{
-            if contains(lista, palavra[i]){
+            if lista.contains(palavra[i]){
                 fraseOrganizada.append(palavra[i])
                 count = count + 1
             }
         }
     }
     
+    @IBAction func btnTraduzir(sender: AnyObject) {
+        self.frase = txtFrase.text!
+        
+    }
+    
     func apareceNaTela(){
-        println("Frase Librês: " + frase)
-        print("Frase Português: ")
+        print("Frase Librês: " + frase)
+        print("Frase Português: ", terminator: "")
         for i in 0...fraseOrganizada.count - 1{
-            print(fraseOrganizada[i] + " ")
+            print(fraseOrganizada[i] + " ", terminator: "")
         }
     }
 
